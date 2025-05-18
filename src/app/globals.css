@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 45 50% 96%; /* Warmer, very light cream/off-white #FAF8F0 */
+    --foreground: 30 30% 20%; /* Dark, warm brown for text #4D4033 */
+
+    --card: 45 40% 94%; /* Slightly darker cream for cards #F2EFE6 */
+    --card-foreground: 30 30% 20%; /* Dark, warm brown for text */
+
+    --popover: 45 40% 94%;
+    --popover-foreground: 30 30% 20%;
+
+    --primary: 30 100% 60%; /* Deep Saffron #FF9933 (Kept) */
+    --primary-foreground: 30 50% 10%; /* Dark Brown for text on Saffron for good contrast #402000 */
+
+    --secondary: 45 30% 92%; /* Muted cream for secondary areas #EDEAE4 */
+    --secondary-foreground: 30 30% 20%;
+
+    --muted: 45 20% 88%; /* #E4E1DA */
+    --muted-foreground: 30 25% 45%; /* #8C7B6A */
+
+    --accent: 0 60% 50%; /* Rich Maroon/Deep Red #BF3F3F */
+    --accent-foreground: 0 0% 98%; /* Light cream/white text on Maroon #FAFAPA */
+
+    --destructive: 0 84.2% 60.2%; /* Kept original destructive */
+    --destructive-foreground: 0 0% 98%; /* Kept original destructive-foreground */
+
+    --border: 45 25% 80%; /* #D7D2C7 */
+    --input: 45 25% 85%; /* #E0DACE */
+    --ring: 30 100% 60%; /* Saffron for focus rings (Kept) */
+
+    --radius: 0.5rem;
+
+    /* Chart colors - can be adjusted if charts are used */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    /* Sidebar specific theme variables */
+    --sidebar-background: 45 45% 90%; /* Slightly darker cream for sidebar #EAE7E0 */
+    --sidebar-foreground: 30 30% 20%; /* Dark, warm brown */
+    --sidebar-primary: 30 100% 60%; /* Saffron */
+    --sidebar-primary-foreground: 30 50% 10%; /* Dark Brown on Saffron */
+    --sidebar-accent: 0 60% 50%; /* Rich Maroon */
+    --sidebar-accent-foreground: 0 0% 98%; /* Light cream/white on Maroon */
+    --sidebar-border: 45 25% 75%; /* #CEC9BD */
+    --sidebar-ring: 30 100% 60%; /* Saffron for rings */
+  }
+
+  .dark {
+    --background: 30 20% 10%; /* Very Dark Brown #261A0D */
+    --foreground: 45 40% 85%; /* Light Cream #E6E1D1 */
+
+    --card: 30 20% 12%; /* Slightly lighter dark brown #2B1F11 */
+    --card-foreground: 45 40% 85%;
+
+    --popover: 30 20% 10%;
+    --popover-foreground: 45 40% 85%;
+
+    --primary: 30 100% 60%; /* Saffron - remains vibrant */
+    --primary-foreground: 30 50% 10%; /* Dark brown on saffron */
+
+    --secondary: 30 15% 15%; /* Muted dark brown #332619 */
+    --secondary-foreground: 45 40% 80%; /* #DCD5C4 */
+
+    --muted: 30 15% 20%; /* #403326 */
+    --muted-foreground: 45 30% 70%; /* #C2BBAF */
+
+    --accent: 0 70% 65%; /* Brighter Maroon for dark mode #D97474 */
+    --accent-foreground: 0 0% 100%; /* White text on Maroon */
+
+    --destructive: 0 62.8% 30.6%; /* Kept original dark destructive */
+    --destructive-foreground: 0 0% 98%; /* Kept original dark destructive-foreground */
+
+    --border: 30 20% 25%; /* Darker Brown #4D4033 */
+    --input: 30 20% 25%;
+    --ring: 30 100% 60%; /* Saffron */
+
+    /* Dark Sidebar specific theme variables */
+    --sidebar-background: 30 18% 14%; /* Darker Brown for sidebar #302517 */
+    --sidebar-foreground: 45 40% 85%; /* Light Cream */
+    --sidebar-primary: 30 100% 60%; /* Saffron */
+    --sidebar-primary-foreground: 30 50% 10%; /* Dark Brown on Saffron */
+    --sidebar-accent: 0 70% 65%; /* Brighter Maroon */
+    --sidebar-accent-foreground: 0 0% 100%; /* White on Maroon */
+    --sidebar-border: 30 20% 22%; /* #453A2B */
+    --sidebar-ring: 30 100% 60%; /* Saffron */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-inter), sans-serif; 
+  }
+}
